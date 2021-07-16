@@ -8,10 +8,10 @@ spec:
     spec:
       chart: mongodb
       sourceRef:
-        kind: GitRepository
-        name: mongodb
+        kind: HelmRepository
+        name: bitnami
         namespace: flux-system
-      version: "10.22.0"
+      version: "10.21.0"
 #  interval: 1m
   install:
     remediation:

@@ -3,7 +3,7 @@ kind: Kustomization
 namespace: flux-system
 resources:
   - jetstack.yaml
-#  - mongodb.yaml
+  - bitnami.yaml
   - internal-app.yaml
   - external-app.yaml
   - bdb.yaml
