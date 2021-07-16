@@ -1,0 +1,23 @@
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: external-app
+spec:
+  releaseName: external-app
+  chart:
+    spec:
+      chart: external-app
+      sourceRef:
+        kind: GitRepository
+        name: external-app
+        namespace: flux-system
+      version: "0.1.0"
+  interval: 30s
+  install:
+    remediation:
+      retries: 3
+  # Default values
+  # https://github.com/bitnami/charts/blob/master/bitnami/nginx-ingress-controller/values.yaml
+  values:
+    image:
+      imageRegistry: "intainregistry/saluda-external-app-staging:1.0.29"

@@ -1,0 +1,23 @@
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: internal-app
+spec:
+  releaseName: internal-app
+  chart:
+    spec:
+      chart: internal-app
+      sourceRef:
+        kind: GitRepository
+        name: internal-app
+        namespace: flux-system
+      version: "0.1.0"
+  interval: 30s
+  install:
+    remediation:
+      retries: 3
+   # Default values
+   # https://github.com/bitnami/charts/blob/master/bitnami/nginx-ingress-controller/values.yaml
+  values:
+    image:
+      imageRegistry: "intainregistry/saluda-internal-app-azure:0.1.2"
