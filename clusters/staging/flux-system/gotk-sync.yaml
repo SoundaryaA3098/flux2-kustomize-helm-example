@@ -7,7 +7,7 @@ metadata:
 spec:
   interval: 1m0s
   ref:
-    branch: flux-test
+    branch: flux-test-2
   secretRef:
     name: flux-system
   url: ssh://git@github.com/SoundaryaA3098/flux2-kustomize-helm-example
