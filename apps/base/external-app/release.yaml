@@ -20,4 +20,4 @@ spec:
   # https://github.com/bitnami/charts/blob/master/bitnami/nginx-ingress-controller/values.yaml
   values:
     image:
-      imageRegistry: "intainregistry/saluda-external-app-staging:1.0.29"
+      imageRegistry: "intainregistry/saluda-external-app-staging:1.0.28"
