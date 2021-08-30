@@ -20,4 +20,4 @@ spec:
    # https://github.com/bitnami/charts/blob/master/bitnami/nginx-ingress-controller/values.yaml
   values:
     image:
-      imageRegistry: "intainregistry/saluda-internal-app-azure:0.1.1"
+      imageRegistry: "intainregistry/lima-internal-app-staging:1.0.1"
